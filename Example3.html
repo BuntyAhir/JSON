@@ -1,0 +1,37 @@
+<html>
+
+  <head>
+    <script src="jquery-2.2.4.js"></script>
+    <script>
+    $(document).ready(function(){
+
+      $('#buttonId').click(function(){
+	
+		$.getJSON('data.json',function(data){
+				$('#content').empty();
+				$.each(data, function(i, field){
+					//var contentString = this.firstName + " " + this.lastName + " " + this.zip;
+					var contentString = field.firstName + " " + field.lastName + " " + field.zip;
+					$('#content').append(contentString);
+				});						   
+			});
+			
+      });
+    });
+
+    </script>
+
+    </head>
+
+<body>
+
+	  <div id="content"></div>
+
+    <form method="post" action="">
+	  
+
+      <input type="button" id="buttonId" value="Click to display json parsed elements" />
+	  
+    </form>
+  </body>
+</html>

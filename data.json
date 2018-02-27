@@ -1,0 +1,18 @@
+[
+        {
+            "firstName":"John",
+            "lastName":"Smith",
+            "zip": "53233"
+        },
+		{
+            "firstName":"Anne",
+            "lastName":"Smith",
+            "zip": "53122"
+        },
+		{
+            "firstName":"Peter",
+            "lastName":"Doe",
+            "zip": "12345"
+        }
+        
+]

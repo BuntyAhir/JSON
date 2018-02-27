@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<script src="jquery-2.2.4.js"></script>
+<script>
+
+function doSomething() {
+	  
+	  var txt = '{"persons":[' +
+		'{"firstName":"John","lastName":"Smith","zip":"53233" },' +
+		'{"firstName":"Anna","lastName":"Smith","zip":"53233" },' +
+		'{"firstName":"Peter","lastName":"D","zip":"12345" }]}';
+		
+		var personObj = JSON.parse(txt);
+
+
+		// var personObj = eval ("(" + txt + ")");
+		
+
+	  
+	  document.getElementById("first").setAttribute("value",personObj.persons[1].firstName);
+	  document.getElementById("last").setAttribute("value",personObj.persons[1].lastName);
+	  document.getElementById("zip").setAttribute("value",personObj.persons[1].zip);
+	  
+	  return true;
+  
+  }
+
+
+    </script>
+
+</head>
+<body>
+	<form method="post" action="">
+		<div id="test">
+
+			First Name:<input id="first" type="text" name="first" /><br /> Last
+			Name:<input id="last" type="text" name="last" /><br /> Zip Code:<input
+				id="zip" type="text" name="zip" style="width: 5em;" /><br />
+		</div>
+
+		<input type="button" id="buttonId"
+			value="Click to fill input elements" onclick="return doSomething();" />
+	</form>
+</body>
+</html>

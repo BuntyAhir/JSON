@@ -1,0 +1,39 @@
+<html>
+
+  <head>
+    <script>
+
+    function doSomething() {
+	  
+	  var data={
+		"firstName":"John",
+		"lastName":"Smith",
+		"zip":"53233"
+	  };
+	  
+	  document.getElementById("first").setAttribute("value",data.firstName);
+	  document.getElementById("last").setAttribute("value",data.lastName);
+	  document.getElementById("zip").setAttribute("value",data.zip);
+	  
+	  return true;
+    
+    }
+	  
+
+    </script>
+
+    </head>
+
+<body>
+    <form method="post" action="">
+    <div id="test">
+
+      First Name:<input id="first" type="text" name="first"/><br/>
+      Last Name:<input id="last" type="text" name="last"/><br/>
+      Zip Code:<input id="zip" type="text" name="zip" style="width: 5em;"/><br/>
+      </div>
+
+      <input type="button" id="buttonId" value="Click to fill input elements" onclick="return doSomething();" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head>
+
+<script>
+  
+	var data = JSON.parse(getJSON('./books.json'));
+	alert(data[0].author[0].last); 
+
+
+	function getJSON(url) {
+	        var resp ;
+	        var xmlHttp ;
+
+	        resp  = '' ;
+	        xmlHttp = new XMLHttpRequest();
+
+	        if(xmlHttp != null)
+	        {
+	            xmlHttp.open( "GET", url, false );
+	            xmlHttp.send(null);
+	            resp = xmlHttp.responseText;
+	        }
+
+	        return resp ;
+	    }
+	
+	
+</script>
+
+</head>
+
+<body>
+	<form method="post" action="">
+		<div id="test">
+
+			First Name:<input id="first" type="text" name="first" /><br /> Last
+			Name:<input id="last" type="text" name="last" /><br /> Zip Code:<input
+				id="zip" type="text" name="zip" style="width: 5em;" /><br />
+		</div>
+
+		<input type="button" id="buttonId"
+			value="Click to fill input elements" onclick="return doSomething();" />
+	</form>
+</body>
+</html>
